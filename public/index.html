@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Analytics Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Time-series Analytics (Atlas + Node)</h2>
+  <div class="row">
+    <div class="control">
+      <label>Field</label>
+      <select id="field">
+        <option value="field1">field1</option>
+        <option value="field2">field2</option>
+        <option value="field3">field3</option>
+      </select>
+    </div>
+
+    <div class="control">
+      <label>Start date</label>
+      <input id="start" type="date" />
+    </div>
+
+    <div class="control">
+      <label>End date</label>
+      <input id="end" type="date" />
+    </div>
+
+    <div class="control">
+      <label>Chart type</label>
+      <select id="chartType">
+        <option value="line">Line</option>
+        <option value="bar">Bar</option>
+      </select>
+    </div>
+
+    <button id="loadBtn">Load</button>
+  </div>
+
+  <div id="msg"></div>
+
+  <div class="card">
+    <canvas id="chart"></canvas>
+  </div>
+
+  <div class="card">
+    <h3>Metrics</h3>
+    <div class="metrics">
+      <div class="metric"><div>Avg</div><strong id="mAvg">-</strong></div>
+      <div class="metric"><div>Min</div><strong id="mMin">-</strong></div>
+      <div class="metric"><div>Max</div><strong id="mMax">-</strong></div>
+      <div class="metric"><div>StdDev</div><strong id="mStd">-</strong></div>
+      <div class="metric"><div>Count</div><strong id="mCount">-</strong></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  </div>
+</body>
+</html>
