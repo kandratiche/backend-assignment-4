@@ -1,4 +1,5 @@
 let chart;
+const API_BASE = "http://localhost:3000";
 
 function setMsg(text) {
   document.getElementById("msg").textContent = text || "";
@@ -21,7 +22,7 @@ async function loadData() {
   if (start) qs.set("start_date", start);
   if (end) qs.set("end_date", end);
 
-  const r1 = await fetch(`/api/measurements?${qs.toString()}`);
+  const r1 = await fetch(`${API_BASE}/api/measurements?${qs.toString()}`);
   const data = await r1.json();
   if (!r1.ok) {
     setMsg(data.error || "Failed to load data");
@@ -31,7 +32,7 @@ async function loadData() {
   const labels = data.map(d => new Date(d.timestamp).toLocaleString());
   const values = data.map(d => d[field]);
 
-  const r2 = await fetch(`/api/measurements/metrics?${qs.toString()}`);
+  const r2 = await fetch(`${API_BASE}/api/measurements/metrics?${qs.toString()}`);
   const metrics = await r2.json();
   if (!r2.ok) {
     setMsg(metrics.error || "Failed to load metrics");

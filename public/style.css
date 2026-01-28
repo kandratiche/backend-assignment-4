@@ -1,35 +1,42 @@
 * {
   box-sizing: border-box;
+  transition: all 0.2s ease;
 }
 
 body {
-  font-family: system-ui, -apple-system, Arial, sans-serif;
-  background: #f4f6f8;
+  font-family: 'Poppins', system-ui, -apple-system, Arial, sans-serif;
+  background: #000000;
   margin: 0;
-  padding: 40px 0;
-  color: #222;
+  padding: 50px 0;
+  color: #f8fafc;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-  background: #ffffff;
-  padding: 30px 40px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  background: #000000;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 255, 255, 0.05);
+  border: 1px solid #111111;
 }
 
 h2 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #0ff;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .row {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   flex-wrap: wrap;
   align-items: end;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .control {
@@ -38,34 +45,45 @@ h2 {
 }
 
 .control label {
-  font-size: 13px;
-  color: #555;
+  font-size: 14px;
+  color: #a1a1aa;
   margin-bottom: 6px;
+  font-weight: 600;
 }
 
 input,
 select {
-  padding: 8px 10px;
+  padding: 12px 14px;
   font-size: 14px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  min-width: 150px;
+  border-radius: 12px;
+  border: 1px solid #333333;
+  min-width: 160px;
+  outline: none;
+  background: #121212;
+  color: #f1f5f9;
+}
+
+input:focus,
+select:focus {
+  border-color: #0ff;
+  box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.3);
 }
 
 button {
-  padding: 10px 18px;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 10px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 14px;
   border: none;
   cursor: pointer;
-  background: #2563eb;
-  color: #fff;
-  transition: background 0.2s ease, transform 0.1s ease;
+  background: #111111;
+  color: #0ff;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
 }
 
 button:hover {
-  background: #1d4ed8;
+  background: #222222;
+  transform: translateY(-2px);
 }
 
 button:active {
@@ -73,44 +91,58 @@ button:active {
 }
 
 #msg {
-  margin: 10px 0 0;
-  color: #b00020;
+  margin: 12px 0 0;
+  color: #f87171;
   font-size: 14px;
+  text-align: center;
 }
 
 .card {
-  margin-top: 24px;
-  padding: 20px;
-  border-radius: 14px;
-  background: #fafafa;
-  border: 1px solid #e5e7eb;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 20px;
+  background: #111111;
+  border: 1px solid #222222;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.05);
 }
 
 .metrics {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 14px;
+  gap: 16px;
 }
 
 .metric {
-  background: #ffffff;
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  background: #1a1a1a;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px solid #222222;
   text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.5);
 }
 
 .metric div {
   font-size: 13px;
-  color: #666;
+  color: #a1a1aa;
 }
 
 .metric strong {
-  font-size: 18px;
+  font-size: 20px;
   display: block;
-  margin-top: 4px;
+  margin-top: 6px;
+  color: #0ff;
 }
 
 canvas {
-  max-height: 420px;
+  max-height: 450px;
+  background: #111111;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.05);
+  padding: 20px;
 }
